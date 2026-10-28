@@ -218,3 +218,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project credential and artifact exclusions
+# Credentials and local overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local environment and Python cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Generated packaging and historical outputs
+*.zip
+archive/

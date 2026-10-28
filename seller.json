@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "assumption": "Fictional demonstration seller; replace with validated business context before real outreach.",
+  "name": "LeadFlow",
+  "product": "lead-workflow software",
+  "value_proposition": "organize lead qualification and follow-up",
+  "voice": "concise, respectful, specific; no hype or unsupported claims",
+  "approved_claims": [
+    "organize lead qualification and follow-up"
+  ],
+  "cta": "Would a 15-minute conversation be useful?"
+}

@@ -1,0 +1,49 @@
+{
+  "tests_run": 53,
+  "failures": 0,
+  "errors": 0,
+  "test_seconds": 0.238,
+  "datasets": [
+    {
+      "file": "leads_training.csv",
+      "total_processed": 29,
+      "qualified_count": 7,
+      "rejected_count": 0,
+      "review_count": 22,
+      "elapsed_seconds": 0.002,
+      "distinct_scores": 22
+    },
+    {
+      "file": "leads_testing.csv",
+      "total_processed": 20,
+      "qualified_count": 4,
+      "rejected_count": 1,
+      "review_count": 15,
+      "elapsed_seconds": 0.002,
+      "distinct_scores": 17
+    },
+    {
+      "file": "leads_full_scale_100.csv",
+      "total_processed": 100,
+      "qualified_count": 29,
+      "rejected_count": 1,
+      "review_count": 70,
+      "elapsed_seconds": 0.005,
+      "distinct_scores": 41
+    }
+  ],
+  "simulated_provider": {
+    "clearly_simulated": true,
+    "leads": 100,
+    "batches": 10,
+    "successful_items": 100,
+    "strict_exit_code": 0,
+    "score_decision_parity": true
+  },
+  "message_variants": [
+    "demo",
+    "educational",
+    "referral"
+  ],
+  "live_provider": "See smoke_report.json; simulation is not evidence of live API success."
+}

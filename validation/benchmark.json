@@ -1,0 +1,11 @@
+{
+  "mode": "offline",
+  "rows": 100,
+  "process_wall_seconds": 0.4072,
+  "includes": "Python process startup, configuration, scoring, template generation and JSON write; no provider calls",
+  "manual_baseline_minutes_per_lead_from_brief": [
+    8,
+    12
+  ],
+  "sales_handling_time_measured": false
+}

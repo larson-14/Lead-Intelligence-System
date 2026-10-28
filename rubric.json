@@ -1,0 +1,135 @@
+{
+  "version": "2.0",
+  "description": "Demonstration ICP: lead-workflow SaaS for 11?500 employee technology and professional-service businesses. Industry is a proxy, not proof of use case. Weights are policy hypotheses, not learned probabilities.",
+  "weights": {
+    "company_size": 0.3,
+    "industry_fit": 0.3,
+    "source_intent": 0.25,
+    "recency": 0.15
+  },
+  "company_size_bands": [
+    {
+      "name": "micro",
+      "min": 1,
+      "max": 10,
+      "score": 3
+    },
+    {
+      "name": "target SMB",
+      "min": 11,
+      "max": 500,
+      "score": 10
+    },
+    {
+      "name": "adjacent mid-market",
+      "min": 501,
+      "max": 5000,
+      "score": 6
+    },
+    {
+      "name": "enterprise",
+      "min": 5001,
+      "max": null,
+      "score": 4
+    }
+  ],
+  "industry_scores": {
+    "SaaS": 10,
+    "Software": 10,
+    "Enterprise Software": 10,
+    "Analytics": 10,
+    "AI/ML": 10,
+    "Cybersecurity": 10,
+    "Marketing": 10,
+    "Consulting": 10,
+    "Business Services": 10,
+    "HR Tech": 10,
+    "FinTech": 6,
+    "EdTech": 6,
+    "Finance": 6,
+    "Insurance": 6,
+    "InsurTech": 6,
+    "Legal": 6,
+    "Logistics": 6,
+    "Supply Chain": 6,
+    "Telecom": 6,
+    "Technology": 6,
+    "Services": 6,
+    "HealthTech": 6,
+    "Agriculture": 3,
+    "Manufacturing": 3,
+    "Retail": 3,
+    "Government": 3,
+    "Consumer": 3,
+    "Consumer Services": 3,
+    "Cultural": 3,
+    "NonProfit": 3,
+    "Construction": 3,
+    "Automotive": 3,
+    "Energy": 3,
+    "Healthcare": 3,
+    "Education": 3,
+    "Hospitality": 3,
+    "Events": 3,
+    "Media": 3,
+    "Pharmaceuticals": 3,
+    "Real Estate": 3,
+    "Travel": 3,
+    "Biotech": 3,
+    "Climate Tech": 3,
+    "Cryptocurrency": 3,
+    "Entertainment": 3,
+    "Environmental": 3,
+    "Sports": 3,
+    "Trade": 3
+  },
+  "source_scores": {
+    "Inbound demo request": 10,
+    "Referral": 8,
+    "Sales call": 6,
+    "Webinar attendee": 5,
+    "Content download": 3,
+    "LinkedIn outreach": 2
+  },
+  "recency_bands": [
+    {
+      "name": "recent",
+      "min": 0,
+      "max": 30,
+      "score": 10
+    },
+    {
+      "name": "warm",
+      "min": 31,
+      "max": 90,
+      "score": 7
+    },
+    {
+      "name": "aging",
+      "min": 91,
+      "max": 180,
+      "score": 4
+    },
+    {
+      "name": "stale",
+      "min": 181,
+      "max": null,
+      "score": 2
+    }
+  ],
+  "thresholds": {
+    "qualified": 7.5,
+    "rejected": 4
+  },
+  "priority_thresholds": {
+    "high": 8.5,
+    "medium": 7.5
+  },
+  "minimum_fit_score": 6,
+  "policy_notes": [
+    "All four factors must be observed for automatic decisions; unknown factors use [1,10] bounds and force review.",
+    "Qualification additionally requires company-size and industry scores >=6. No hard disqualifiers are assumed.",
+    "Missing contact/company blocks outreach, not the independently calculated fit decision.",
+    "Recency is measured against the explicit --as-of snapshot."
+  ]
+}
